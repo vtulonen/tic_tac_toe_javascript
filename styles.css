@@ -1,0 +1,81 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --winner: 'loser';
+}
+
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+ 
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% auto;
+  place-items: center;
+  background: rgb(144, 144, 206);
+}
+
+#game-board {
+  align-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  width: 249px;
+  height: 249px;
+  
+  opacity: 0;
+  transition: 2s;
+  position: relative;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 1px;
+  display: grid;
+  place-items: center;
+}
+
+#restart {
+  display: none;
+}
+
+button {
+  position: relative;
+  bottom: 0;
+}
+
+/* #square-0, #square-1, #square-2, #square-3, #square-4, #square-5 {
+  border-bottom: solid black 1px;
+}
+
+#square-0, #square-3, #square-6, #square-1, #square-4, #square-7 {
+  border-right: solid black 1px;
+} */
+
+
+
+.winMessage {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  width: 246px;
+  height: 248px;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 0.8;
+  
+}
